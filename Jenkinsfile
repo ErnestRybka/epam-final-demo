@@ -1,5 +1,5 @@
 node('aws_2') {
-    def app
+    def app 
 
     stage('Clone repository locally') {
         /* Let's make sure we have the repository cloned to our workspace */
