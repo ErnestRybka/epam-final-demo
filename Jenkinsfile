@@ -47,6 +47,11 @@ node('aws_2'){
        sh "docker rm \$(docker ps -a -q) || true"
     }
 
+    stage('get instractions'){
+        sh "rm docker-compose.yaml || true"
+        sh "wget https://github.com/ErnestRybka/epam-final-demo/blob/master/docker-compose.yaml"
+    }
+
 
     stage('run image') {
         sh "docker-compouse up"
