@@ -3,7 +3,7 @@ services:
   web:
     image: "rybkaer/epam-final-demo"
     ports:
-     - "80:8080" 
+     - "80:8080"  
     environment:
       - MYSQL_HOST=epam-final-demo.ct7k1y3kgjj7.us-west-2.rds.amazonaws.com
       - MYSQL_USER=root
