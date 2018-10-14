@@ -30,7 +30,7 @@ node('aws_1'){
     }
 
     stage('run image') {
-        sh "docker-compouse --project-directory /home/ubuntu/workspace/epam-final-demo up"
+        sh "docker-compouse -f /home/ubuntu/workspace/epam-final-demo/docker-compouse.yaml up"
     }
     
 }
@@ -48,7 +48,7 @@ node('aws_2'){
 
 
     stage('run image') {
-        sh "docker-compouse --project-directory /home/ubuntu/workspace/epam-final-demo up"
+        sh "docker-compouse -f /home/ubuntu/workspace/epam-final-demo/docker-compouse.yaml up"
     }
     
 }
