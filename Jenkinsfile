@@ -30,7 +30,7 @@ node('aws_1'){
     }
 
     stage('run image') {
-        sh "docker-compose -f /home/ubuntu/workspace/epam-final-demo/docker-compose.yml up"
+        sh "docker-compose -f /home/ubuntu/workspace/epam-final-demo/docker-compose.yml up -d"
     }
     
 }
@@ -48,7 +48,7 @@ node('aws_2'){
 
 
     stage('run image') {
-        sh "docker-compose -f /home/ubuntu/workspace/epam-final-demo/docker-compose.yml up"
+        sh "docker-compose -f /home/ubuntu/workspace/epam-final-demo/docker-compose.yml up -d"
     }
     
 }
