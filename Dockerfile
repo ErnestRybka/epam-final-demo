@@ -14,8 +14,6 @@ WORKDIR /app
 # Copy notepad jar file
 COPY target/*.jar app.jar
 
-DOCKER_OPTS="--dns 10.0.0.2 -H tcp://127.0.0.1:4243 -H unix:///var/run/docker.sock -g /mnt/docker"
-
 # Add initialization script
 ADD entrypoint.sh entrypoint.sh
 

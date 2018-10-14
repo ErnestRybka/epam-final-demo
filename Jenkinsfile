@@ -10,7 +10,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("rybkaer/extension_lab_backend")
+        app = docker.build("rybkaer/epam-final-demo")
         app.push()
     }
 }
@@ -18,7 +18,7 @@ node {
 node('aws_1'){
 
     stage('pull image'){
-        sh "docker pull rybkaer/extension_lab_backend"
+        sh "docker pull rybkaer/epam-final-demo"
     }
     
     stage('stop/delite all containers'){
@@ -36,7 +36,7 @@ node('aws_1'){
 node('aws_2'){
 
     stage('pull image'){
-        sh "docker pull rybkaer/extension_lab_backend"
+        sh "docker pull rybkaer/epam-final-demo"
     }
     
     stage('stop/delite all containers'){
