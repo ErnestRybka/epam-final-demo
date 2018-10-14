@@ -1,4 +1,4 @@
-node('aws_1') {
+node('aws_2') {
     def app
 
     stage('Clone repository locally') {
