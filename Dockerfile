@@ -21,7 +21,7 @@ ADD entrypoint.sh entrypoint.sh
 RUN chmod 755 entrypoint.sh
 
 # Expose default servlet container port
-EXPOSE 8080
+EXPOSE 80
 
 # Main command
 ENTRYPOINT ["/bin/sh", "entrypoint.sh"]
