@@ -1,10 +1,13 @@
-node {
+node('aws_1') {
     def app
 
     stage('Clone repository locally') {
         /* Let's make sure we have the repository cloned to our workspace */
 
         checkout scm
+    }
+    stage('build app'){
+        sh "mvn clean install"
     }
     stage('Build image') {
         /* This builds the actual image; synonymous to
