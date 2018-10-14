@@ -1,5 +1,5 @@
 version: '2.1'
-services:
+services: 
   web:
     image: "rybkaer/epam-final-demo"
     ports:
